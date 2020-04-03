@@ -1,8 +1,7 @@
-
 package Logica;
 
 public class Cliente {
-    
+
     private int id;
     private String nombre;
     private String ciudad;
@@ -66,13 +65,13 @@ public class Cliente {
     public void setUsuario_id(int usuario_id) {
         this.usuario_id = usuario_id;
     }
-    
-   public void cargar_datos(String nombre,String ciudad,String nit,String telefono,String estatus,int usuario_id){
-       this.setNombre(nombre);
-       this.setCiudad(ciudad);
-       this.setNit(nit);
-       this.setTelefono(telefono);
-       this.setEstatus(estatus);
-       this.setUsuario_id(usuario_id);
-   }
+
+    public void cargar_datos(String nombre, String ciudad, String nit, String telefono, String estatus, int usuario_id) {
+        this.setNombre(nombre);
+        this.setCiudad(ciudad);
+        this.setNit(nit);
+        this.setTelefono(telefono);
+        this.setEstatus(estatus);
+        this.setUsuario_id(usuario_id);
+    }
 }
