@@ -3,7 +3,6 @@ package Persistencia;
 import java.sql.*;/// el asterisco sirva para importar todos los opciones....
 
 public class ConexionSQL {
-    //public static String url= String.format("jdbc:mysql://%s:%d/%s?useSSL=false","127.0.0.1",3306,"sistema");
     public static String url="jdbc:mysql://localhost/dbrestaurante";
     public static String usuario="root";
     public static String clave="";
