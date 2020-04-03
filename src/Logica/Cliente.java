@@ -3,6 +3,7 @@ package Logica;
 public class Cliente {
 
     private int id;
+    
     private String nombre;
     private String ciudad;
     private String nit;
