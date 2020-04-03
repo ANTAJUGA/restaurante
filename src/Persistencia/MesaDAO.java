@@ -21,7 +21,7 @@ public class MesaDAO {
         int resultado = 0;
         Mesa m= new Mesa();
         m.setId(n);
-        String sentencia_actualizar = ("UPDATE mesa SET disponible = 1 WHERE id = " +m.getId() );
+        String sentencia_actualizar = ("UPDATE tblmesa SET estado = 1 WHERE id = " +m.getId() );
         try {
             conn.conectar();//creamos la conexion
             //creamos le sentencia para guardar los datos
@@ -44,7 +44,7 @@ public class MesaDAO {
         int resultado = 0;
         Mesa m= new Mesa();
         m.setId(n);
-        String sentencia_actualizar = ("UPDATE mesa SET disponible = 0 WHERE id = " +m.getId() );
+        String sentencia_actualizar = ("UPDATE tblmesa SET estado = 0 WHERE id = " +m.getId() );
         try {
             conn.conectar();//creamos la conexion
             //creamos le sentencia para guardar los datos
@@ -67,7 +67,7 @@ public class MesaDAO {
         int[] n = new int[15];
         int i = 0;
         Mesa m=new Mesa();
-        String sentencia_listar = ("select disponible from  mesa");
+        String sentencia_listar = ("select estado from  tblmesa");
         //String sentencia_buscar = ("SELECT id FROM persona WHERE dni=" + u.getCedula());
         try {
             conn.conectar();//creamos la conexion
@@ -75,7 +75,7 @@ public class MesaDAO {
             sentencia_preparada = conn.conectar().prepareStatement(sentencia_listar);
             RS = sentencia_preparada.executeQuery();
             while (RS.next()) {
-                m.setDisponible(RS.getInt("disponible"));
+                m.setDisponible(RS.getInt("estado"));
                 n[i] = m.getDisponible();
                 i++;
             }
