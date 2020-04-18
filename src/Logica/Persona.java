@@ -2,6 +2,7 @@
 package Logica;
 
 public class Persona {
+    //atributo eda privado
     private int edad;
 
     public int getEdad() {
